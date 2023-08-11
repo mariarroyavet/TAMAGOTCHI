@@ -38,8 +38,8 @@ function initPet(pet) {
         petEnergy.textContent = `Energy:${energy}`;
         return energy;
       } else {
-        petImage.src = "./assets/pepa.gif";
-        petMessage.textContent = "I don't need to sleep";
+        petImage.src = "./assets/pepa_mad.gif";
+        petMessage.textContent = "I don't need to sleep ¬¬";
         petEnergy.textContent = `Energy:${energy}`;
         return energy;
       }
@@ -47,7 +47,7 @@ function initPet(pet) {
     play: function () {
       if (energy > 10) {
         petImage.src = "./assets/pepa_playing.gif";
-        petMessage.textContent = `${petName} is jumping`;
+        petMessage.textContent = `${petName} is having fun!`;
         status = "running";
         age++;
         energy = energy - 30;
@@ -59,7 +59,7 @@ function initPet(pet) {
         };
       } else if (energy <= 10) {
         petImage.src = "./assets/pepa_dead.gif";
-        petMessage.textContent = "Pepa is dead x_x";
+        petMessage.textContent = "I'm dead x_x";
       }
     },
     eat: function () {
@@ -76,12 +76,12 @@ function initPet(pet) {
           status,
         };
       } else if (energy <= 90) {
-        petImage.src = "./assets/pepa.gif";
-        petMessage.textContent = "I'm full";
+        petImage.src = "./assets/pepa_mad.gif";
+        petMessage.textContent = "I'm full, stop it ¬¬";
         petEnergy.textContent = `Energy:${energy}`;
         return energy;
       } else {
-        petImage.src = "./assets/pepa.gif";
+        petImage.src = "./assets/pepa_mad.gif";
         petMessage.textContent = "I just ate";
         petEnergy.textContent = `Energy:${energy}`;
         return energy;
@@ -90,7 +90,7 @@ function initPet(pet) {
     die: function() {
         if (energy <=10) {
         petImage.src = "./assets/pepa_dead.gif";
-        petMessage.textContent = `${petName} is dead`;
+        petMessage.textContent = `I'm dead`;
         status = "Bacon";
         }
         return{
