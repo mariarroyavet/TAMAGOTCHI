@@ -58,7 +58,7 @@ function initPet(pet) {
           status,
         };
       } else if (energy <= 10) {
-        petImage.src = "./assets/pepa_dead";
+        petImage.src = "./assets/pepa_dead.gif";
         petMessage.textContent = "I'm dead";
       }
     },
